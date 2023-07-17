@@ -37,6 +37,7 @@ FortuneThemesDict: Dict[str, List[str]] = {
     "touhou_lostword": ["东方归言录", "东方lostword", "touhou lostword"],
     "touhou_old": ["旧东方", "旧版东方", "老东方", "老版东方", "经典东方"],
     "warship_girls_r": ["战舰少女R", "舰r", "舰R", "wsgr", "WSGR", "战舰少女r"],
+    "hanayori": ["花寄", "花寄女子寮", "花寄女生宿舍"]
 }
 
 
@@ -72,6 +73,7 @@ class ThemesFlagConfig(BaseModel, extra=Extra.ignore):
     touhou_lostword_flag: bool = True
     touhou_old_flag: bool = True
     warship_girls_r_flag: bool = True
+    hanayori_flag: bool = True
 
     @root_validator
     def check_all_disabled(cls, values) -> None:
